@@ -12,6 +12,7 @@ public class KafkaSendMassageScheduler implements com.example.kafkaprod.schedule
 
     private final SendEventFacade sendEventFacade;
 
+    @Override
     @Async
     @Scheduled(fixedRateString = "${kafka.producer.send.massage.timeout}")
     public void sendMessage() {
