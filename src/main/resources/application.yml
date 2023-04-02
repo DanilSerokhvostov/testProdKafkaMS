@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: ms-kafka-producer
+  kafka:
+    producer:
+      acks: all
+      retries: 3
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: com.example.kafkaprod.config.kafka.KafkaProducerJsonSerializer
+      properties:
+        request.timeout.ms: 1000
+        linger.ms: 1000
+        max.block.ms: 1000
+#        allow.auto.create.topics: false
+#  автоматическое создание плохо, но для тестового нормально
+
+topics:
+  massageTopic: massageTopic
+
+kafka:
+  producer:
+    send:
+      massage:
+        timeout: 1000
+
+scheduler:
+  enabled: true
+
+
+
