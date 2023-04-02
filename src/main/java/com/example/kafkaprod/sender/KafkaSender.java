@@ -1,10 +1,10 @@
 package com.example.kafkaprod.sender;
 
 
-import java.util.Map;
+import com.example.kafkaprod.model.Massage;
 
 public interface KafkaSender {
 
-  void send(Map<String, String> massage);
+  void send(Massage massage);
 
 }

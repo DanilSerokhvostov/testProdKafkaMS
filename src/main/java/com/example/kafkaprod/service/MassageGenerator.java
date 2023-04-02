@@ -1,8 +1,8 @@
 package com.example.kafkaprod.service;
 
-import java.util.Map;
+import com.example.kafkaprod.model.Massage;
 
 public interface MassageGenerator {
 
-    Map<String, String> generateMassage(int minLength, int maxLength);
+    Massage generateMassage(int minLength, int maxLength);
 }
